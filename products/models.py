@@ -2,15 +2,11 @@ from pyexpat import model
 from tkinter import CASCADE
 from django.db import models
 
-# Create your models here.
-
-
 class Menu(models.Model):
     name = models.CharField(max_length=20)
 
     class Meta:
         db_table = 'menus'
-
 
 class Category(models.Model):
     name = models.CharField(max_length=20)
