@@ -55,12 +55,12 @@ class Size(models.Model):
         db_table = 'sizes'
 
 class Nutrition(models.Model):
-    one_serving_kcal = models.DecimalField(decimal_places=3, max_digits=3)
-    sodium_mg = models.DecimalField(decimal_places=3, max_digits=3)
-    saturated_fat = models.DecimalField(decimal_places=3, max_digits=3)
-    sugars_g = models.DecimalField(decimal_places=3, max_digits=3)
-    protein_g = models.DecimalField(decimal_places=3, max_digits=3)
-    caffeine_mg = models.DecimalField(decimal_places=3, max_digits=3)
+    one_serving_kcal = models.DecimalField(decimal_places=2, max_digits=10)
+    sodium_mg = models.DecimalField(decimal_places=2, max_digits=10)
+    saturated_fat = models.DecimalField(decimal_places=2, max_digits=10)
+    sugars_g = models.DecimalField(decimal_places=2, max_digits=10)
+    protein_g = models.DecimalField(decimal_places=2, max_digits=10)
+    caffeine_mg = models.DecimalField(decimal_places=2, max_digits=10)
     drink = models.ForeignKey('Drink', on_delete=models.CASCADE)
     size = models.ForeignKey('Size', on_delete=models.CASCADE)
 
